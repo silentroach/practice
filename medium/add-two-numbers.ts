@@ -26,23 +26,21 @@ class ListNode {
 const addTwoNumbersInner = (
   l1?: ListNode | null,
   l2?: ListNode | null,
-  remains: number = 0
+  remains: number = 0 // can be 0 or 1
 ): ListNode | null => {
-  const sum = remains + (l1?.val ?? 0) + (l2?.val ?? 0);
+  if (!l1 && !l2) {
+    if (remains > 0) {
+      return new ListNode(remains);
+    }
 
-  if (sum === 0 && !l1 && !l2) {
     return null;
   }
 
-  if (sum < 10) {
-    return new ListNode(sum, addTwoNumbersInner(l1?.next, l2?.next));
-  }
-
-  const lastDigit = sum % 10;
+  const sum = remains + (l1?.val ?? 0) + (l2?.val ?? 0);
 
   return new ListNode(
-    lastDigit,
-    addTwoNumbersInner(l1?.next, l2?.next, (sum - lastDigit) / 10)
+    sum % 10,
+    addTwoNumbersInner(l1?.next, l2?.next, sum >= 10 ? 1 : 0)
   );
 };
 
