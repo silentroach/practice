@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "node",
+
+		"target": "es2019",
+		"lib": ["es2019"],
+
+		"strict": true,
+		"sourceMap": true,
+
+		"declaration": true,
+
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+
+		"pretty": true,
+		"resolveJsonModule": true,
+
+		"noUnusedLocals": true,
+		"noImplicitAny": true
+	},
+	"exclude": ["./node_modules"]
+}
