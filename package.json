@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tap --ts **/*.ts"
+    "test": "tap --ts algorithms/**/*.ts"
   },
   "author": "",
   "license": "ISC",
