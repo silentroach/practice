@@ -57,10 +57,6 @@ const lookup = (
         (!current || isNeighbors(current, letterPosition))
     );
 
-  if (variants.length === 0) {
-    return false;
-  }
-
   for (const variant of variants) {
     used.add(variant);
 
@@ -78,7 +74,7 @@ const exist = (board: readonly string[][], word: string): boolean => {
   const letters = word.split("");
 
   // collect unique letters in word to filter useless cells
-  const unique = new Set(word.split(""));
+  const unique = new Set(letters);
 
   // collecting positions for all word letters
   const positions: LetterPositions = board.reduce(
