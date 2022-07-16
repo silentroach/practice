@@ -34,7 +34,7 @@ const isValidBST = (
     return true;
   }
 
-  if (root.val < min || root.val > max) {
+  if (root.val <= min || root.val >= max) {
     return false;
   }
 
