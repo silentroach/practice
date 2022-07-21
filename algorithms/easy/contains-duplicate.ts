@@ -10,15 +10,14 @@ import tap from "tap";
 const containsDuplicate = (nums: readonly number[]): boolean => {
   const uniq = new Set<number>();
 
-  for (const num of nums) {
+  return nums.some((num) => {
     if (uniq.has(num)) {
       return true;
     }
 
     uniq.add(num);
-  }
-
-  return false;
+    return false;
+  });
 };
 
 tap.equal(containsDuplicate([1, 2, 3, 1]), true);
