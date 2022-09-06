@@ -13,8 +13,8 @@ import tap from "tap";
  */
 
 const tictactoe = (moves: readonly number[][]): string => {
-  const columns: number[] = new Array(3).fill(0);
-  const rows: number[] = new Array(3).fill(0);
+  const columns: number[] = [0, 0, 0];
+  const rows: number[] = [0, 0, 0];
   let diagonal = 0;
   let diagonal2 = 0;
 
