@@ -4,4 +4,5 @@ Leetcode problems solving
 
 # TODO
 
-[ ] Recheck medium/word-search
+- [ ] Migrate from tap to jest
+- [ ] Recheck medium/word-search

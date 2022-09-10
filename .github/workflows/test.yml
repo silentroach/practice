@@ -23,3 +23,8 @@ jobs:
 
       - name: test
         run: npm t
+
+      - name: upload to coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.github_token }}

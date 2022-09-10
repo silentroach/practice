@@ -1,5 +1,3 @@
-import tap from "tap";
-
 /**
  * Implement the myAtoi(string s) function, which converts a
  * string to a 32-bit signed integer (similar to C/C++'s atoi function).
@@ -32,7 +30,7 @@ const DigitsMap = new Map(
     .map((_, idx) => [String(idx), idx])
 );
 
-const myAtoi = (s: string): number => {
+export const myAtoi = (s: string): number => {
   const length = s.length;
   let n = 0;
   let sign = 1;
@@ -74,8 +72,3 @@ const myAtoi = (s: string): number => {
 
   return signed;
 };
-
-tap.equal(myAtoi("42"), 42);
-tap.equal(myAtoi("      -42"), -42);
-tap.equal(myAtoi("4193 with words"), 4193);
-tap.equal(myAtoi("-91283472332"), -2147483648);
