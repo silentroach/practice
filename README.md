@@ -1,6 +1,6 @@
 # Practice
 
-Leetcode problems solving
+Problems solving practice
 
 # TODO
 
