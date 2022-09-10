@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+const readline = require("readline");
+
+const { primeReduction } = require("./prime-reduction");
+
+const reader = readline.createInterface({
+  input: process.stdin,
+  terminal: false,
+});
+
+reader.on("line", (line) => {
+  const number = parseInt(line, 10);
+  if (!Number.isFinite(number)) {
+    throw new TypeError("Unsupported value type");
+  }
+  if (number === 4) {
+    reader.close();
+    return;
+  }
+
+  console.log(primeReduction(number).join(" "));
+});
