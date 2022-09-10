@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+
+const readline = require("readline");
+
+const { processCase } = require("./process");
+
+const reader = readline.createInterface({
+  input: process.stdin,
+  terminal: false,
+});
+
+let caseBuffer = [];
+let caseLength = 0;
+let caseIndex = 0;
+
+const processCaseBuffer = () => {
+  if (caseBuffer.length === 0) {
+    return;
+  }
+
+  const result = processCase(caseBuffer) ?? "IMPOSSIBLE";
+  caseBuffer = [];
+
+  console.log([`Case ${++caseIndex}:`, result].join(" "));
+};
+
+reader
+  .on("line", (line) => {
+    if (caseLength === 0) {
+      processCaseBuffer();
+
+      caseLength = parseInt(line, 10);
+      if (!Number.isFinite(caseLength)) {
+        throw new TypeError("Invalid case lines count");
+      }
+      return;
+    }
+
+    caseBuffer.push(line.split(/\s/));
+    --caseLength;
+  })
+  .on("close", () => {
+    processCaseBuffer();
+
+    process.exit(0);
+  });
