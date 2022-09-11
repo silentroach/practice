@@ -28,14 +28,14 @@ export const checkRecord = (s: string): boolean => {
       }
     } else {
       consecutiveLateCount = 0;
-    }
 
-    if (record === "A") {
-      if (wasAbsent) {
-        return false;
+      if (record === "A") {
+        if (wasAbsent) {
+          return false;
+        }
+
+        wasAbsent = true;
       }
-
-      wasAbsent = true;
     }
   }
 
