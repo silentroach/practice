@@ -1,5 +1,3 @@
-import tap from "tap";
-
 /**
  * https://leetcode.com/problems/number-of-islands/
  *
@@ -48,7 +46,7 @@ const removeIsland = (
   }
 };
 
-const numIslands = (grid: Grid): number => {
+export const numIslands = (grid: Grid): number => {
   let count = 0;
 
   // searching for island, count it and remove
@@ -63,25 +61,3 @@ const numIslands = (grid: Grid): number => {
 
   return count;
 };
-
-// region tests
-tap.equal(
-  numIslands([
-    ["1", "1", "1", "1", "0"],
-    ["1", "1", "0", "1", "0"],
-    ["1", "1", "0", "0", "0"],
-    ["0", "0", "0", "0", "0"],
-  ]),
-  1
-);
-
-tap.equal(
-  numIslands([
-    ["1", "1", "0", "0", "0"],
-    ["1", "1", "0", "0", "0"],
-    ["0", "0", "1", "0", "0"],
-    ["0", "0", "0", "1", "1"],
-  ]),
-  3
-);
-// endregion
