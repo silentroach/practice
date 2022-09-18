@@ -7,5 +7,7 @@ Problems solving practice
 
 # TODO
 
-- [ ] Migrate from tap to jest
-- [ ] Recheck medium/word-search
+- [x] Migrate from tap to jest
+- [ ] Migrate old tests from tap to jest
+- [ ] Recheck leetcode/medium/word-search
+- [ ] Rewrite leetcode/medium/decode-as-string to more efficient solution
