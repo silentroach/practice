@@ -11,3 +11,4 @@ Problems solving practice
 - [ ] Migrate old tests from tap to jest
 - [ ] Recheck leetcode/medium/word-search
 - [ ] Rewrite leetcode/medium/decode-as-string to more efficient solution
+- [ ] Rewrite leetcode/medium/coin-exchange, now it is completely wrong
