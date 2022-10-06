@@ -7,11 +7,9 @@
  * Timestamps in `set` are *always* incrementing
  */
 
-import tap from "tap";
-
 type TimedValue = [number, string];
 
-class TimeMap {
+export class TimeMap {
   // timestamps are ordered, so we can use array
   // key => [ [timestamp1, value], [timestamp2, value], ... ]
   private readonly values = new Map<string, TimedValue[]>();
@@ -56,22 +54,6 @@ class TimeMap {
       }
     }
 
-    if (upper === 0) {
-      return "";
-    }
-
     return byKey[upper - 1]?.[1];
   }
 }
-
-// region tests
-const map = new TimeMap();
-map.set("test", "value", 1);
-map.set("test", "value2", 2);
-map.set("test", "value3", 4);
-
-tap.equal(map.get("kek", 0), "", "no key found");
-tap.equal(map.get("test", 0), "", "timestamp before first in array");
-tap.equal(map.get("test", 4), "value3");
-tap.equal(map.get("test", 5), "value3");
-// endregion
