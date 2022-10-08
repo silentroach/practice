@@ -1,4 +1,5 @@
 import tap from "tap";
+import { TreeNode } from "../_predefined/tree-node";
 
 /**
  * https://leetcode.com/problems/binary-tree-level-order-traversal/
@@ -6,20 +7,6 @@ import tap from "tap";
  * Given the root of a binary tree, return the level order traversal of its nodes'
  * values. (i.e., from left to right, level by level).
  */
-
-// region predefined
-class TreeNode {
-  val: number;
-  left: TreeNode | null;
-  right: TreeNode | null;
-
-  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.left = left === undefined ? null : left;
-    this.right = right === undefined ? null : right;
-  }
-}
-// endregion
 
 const levelOrder = (root: TreeNode | null): number[][] => {
   if (root === null) {
