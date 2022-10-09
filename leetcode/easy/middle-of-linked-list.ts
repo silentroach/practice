@@ -1,4 +1,5 @@
 import tap from "tap";
+import { ListNode } from "../_predefined/list-node";
 
 /**
  * https://leetcode.com/problems/middle-of-the-linked-list/
@@ -7,17 +8,6 @@ import tap from "tap";
  *
  * If there are two middle nodes, return the second middle node.
  */
-
-// region predefined
-class ListNode {
-  val: number;
-  next: ListNode | null;
-  constructor(val?: number, next?: ListNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.next = next === undefined ? null : next;
-  }
-}
-// endregion
 
 const middleNode = (head: ListNode | null): ListNode | null => {
   let middle = head;

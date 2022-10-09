@@ -1,4 +1,5 @@
 import tap from "tap";
+import { arrayToList, ListNode, listToArray } from "../_predefined/list-node";
 
 /**
  * You are given two non-empty linked lists representing
@@ -9,19 +10,6 @@ import tap from "tap";
  * You may assume the two numbers do not contain any leading
  * zero, except the number 0 itself.
  */
-
-/**
- * Predefined ListNode implementation
- */
-class ListNode {
-  val: number;
-  next: ListNode | null;
-
-  constructor(val?: number, next?: ListNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.next = next === undefined ? null : next;
-  }
-}
 
 const addTwoNumbersInner = (
   l1?: ListNode | null,
@@ -63,35 +51,6 @@ const addTwoNumbers = (
 };
 
 // ---
-
-// region test helpers
-const arrayToList = (data: number[]): ListNode => {
-  if (data.length === 0) {
-    throw new Error("Empty data");
-  }
-
-  let node: ListNode | null = null;
-
-  for (let number of data) {
-    node = new ListNode(number, node);
-  }
-
-  return node!;
-};
-
-const listToArray = (list: ListNode | null): number[] => {
-  if (list === null) {
-    return [];
-  }
-
-  const result = [];
-  if (list?.next) {
-    result.push(...listToArray(list.next));
-  }
-
-  return [list.val, ...result];
-};
-// endregion
 
 tap.same(
   listToArray(addTwoNumbers(arrayToList([2, 4, 3]), arrayToList([5, 6, 4]))),

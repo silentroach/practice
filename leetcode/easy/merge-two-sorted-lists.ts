@@ -1,4 +1,5 @@
 import tap from "tap";
+import { arrayToList, ListNode, listToArray } from "../_predefined/list-node";
 
 /**
  * https://leetcode.com/problems/merge-two-sorted-lists/
@@ -10,17 +11,6 @@ import tap from "tap";
  *
  * Return the head of the merged linked list.
  */
-
-class ListNode {
-  val: number;
-
-  next: ListNode | null;
-
-  constructor(val?: number, next?: ListNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.next = next === undefined ? null : next;
-  }
-}
 
 const mergeTwoLists = (
   list1: ListNode | null,
@@ -44,32 +34,6 @@ const mergeTwoLists = (
 };
 
 // ---
-
-// @todo split test helpers?
-
-// region test helpers
-const arrayToList = (data: readonly number[]): ListNode | null => {
-  if (data.length === 0) {
-    return null;
-  }
-
-  const [first, ...other] = data;
-  return new ListNode(first, arrayToList(other));
-};
-
-const listToArray = (list: ListNode | null): number[] => {
-  if (list === null) {
-    return [];
-  }
-
-  const result = [];
-  if (list?.next) {
-    result.push(...listToArray(list.next));
-  }
-
-  return [list.val, ...result];
-};
-// endregion
 
 tap.same(
   listToArray(mergeTwoLists(arrayToList([1, 2, 4]), arrayToList([1, 3, 4]))),
