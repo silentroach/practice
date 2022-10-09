@@ -1,5 +1,3 @@
-import tap from "tap";
-
 /**
  * https://leetcode.com/problems/valid-parentheses/
  *
@@ -17,7 +15,7 @@ const ClosingBracketMap: ReadonlyMap<string, string> = new Map([
   ["]", "["],
 ]);
 
-const isValid = (s: string): boolean => {
+export const isValid = (s: string): boolean => {
   const max = s.length;
 
   const stack = [];
@@ -49,8 +47,3 @@ const isValid = (s: string): boolean => {
 
   return stackLength === 0;
 };
-
-tap.equal(isValid("()"), true);
-tap.equal(isValid("()[]{}"), true);
-tap.equal(isValid("(]"), false);
-tap.equal(isValid("["), false);
