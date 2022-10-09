@@ -9,7 +9,7 @@
  * Increment the large integer by one and return the resulting array of digits.
  */
 
-const plusOne = (digits: number[]): number[] => {
+export const plusOne = (digits: readonly number[]): readonly number[] => {
   const result = ([] as number[]).concat(digits);
   let pos = digits.length - 1;
 
@@ -31,5 +31,3 @@ const plusOne = (digits: number[]): number[] => {
 
   return result;
 };
-
-console.log(plusOne([9, 9, 9, 9]));

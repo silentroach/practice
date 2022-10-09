@@ -1,5 +1,3 @@
-import tap from "tap";
-
 /**
  * https://leetcode.com/problems/single-number/
  *
@@ -11,10 +9,5 @@ import tap from "tap";
  */
 
 // xor works only for this specific case
-const singleNumber = (nums: number[]): number =>
+export const singleNumber = (nums: number[]): number =>
   nums.reduce((result, num) => result ^ num);
-
-// region tests
-tap.equal(singleNumber([1, 1, 2, 3, 3]), 2);
-tap.equal(singleNumber([1, 6, 2, 1, 2, 3, 3]), 6);
-// endregion
