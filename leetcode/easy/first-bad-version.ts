@@ -1,5 +1,3 @@
-import tap from "tap";
-
 /**
  * https://leetcode.com/problems/first-bad-version/
  *
@@ -16,10 +14,9 @@ import tap from "tap";
  * You should minimize the number of calls to the API.
  */
 
-// The knows API is defined in the parent class Relation.
-type IsBadVersion = (version: number) => boolean;
+export type IsBadVersion = (version: number) => boolean;
 
-const solution =
+export const solution =
   (isBadVersion: IsBadVersion) =>
   (n: number): number => {
     let end = n;
@@ -37,15 +34,3 @@ const solution =
 
     return start;
   };
-
-// region tests
-const mockedBadVersion =
-  (bad: number): IsBadVersion =>
-  (version: number) =>
-    version >= bad;
-
-tap.equal(solution(mockedBadVersion(4))(5), 4);
-tap.equal(solution(mockedBadVersion(12))(40), 12);
-tap.equal(solution(mockedBadVersion(1))(40), 1);
-tap.equal(solution(mockedBadVersion(1))(1), 1);
-// endregion
