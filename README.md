@@ -12,3 +12,4 @@ Problems solving practice
 - [ ] Recheck leetcode/medium/word-search
 - [ ] Rewrite leetcode/medium/decode-as-string to more efficient solution
 - [ ] Rewrite leetcode/medium/coin-exchange, now it is completely wrong
+- [ ] Another ways for leetcode/medium/rotate-array
