@@ -1,12 +1,12 @@
 {
   "name": "leetcode",
   "version": "1.0.0",
-  "description": "",
+  "description": "Practicing",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
-  "author": "",
+  "author": "Kalashnikov Igor <igor.kalashnikov@me.com>",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.0.0",
