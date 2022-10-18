@@ -1,5 +1,3 @@
-import tap from "tap";
-
 /**
  * https://leetcode.com/problems/roman-to-integer/
  *
@@ -40,7 +38,7 @@ const Symbols: ReadonlyMap<string, number> = new Map([
   ["M", 1000],
 ]);
 
-const romanToInt = (s: string): number => {
+export const romanToInt = (s: string): number => {
   let result = 0;
   let last = 0;
 
@@ -59,7 +57,3 @@ const romanToInt = (s: string): number => {
 
   return result;
 };
-
-tap.equal(romanToInt("MCMXCIV"), 1994);
-tap.equal(romanToInt("LVIII"), 58);
-tap.equal(romanToInt("III"), 3);

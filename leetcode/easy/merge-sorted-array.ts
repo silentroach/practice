@@ -1,5 +1,3 @@
-import tap from "tap";
-
 /**
  * https://leetcode.com/problems/merge-sorted-array/
  *
@@ -16,7 +14,7 @@ import tap from "tap";
  * nums2 has a length of n.
  */
 
-const merge = (
+export const merge = (
   nums1: number[],
   m: number,
   nums2: number[],
@@ -30,7 +28,3 @@ const merge = (
     nums1[end--] = n < 0 || nums1[m] >= nums2[n] ? nums1[m--] : nums2[n--];
   }
 };
-
-const num1 = [1, 2, 3, 0, 0, 0];
-merge(num1, 3, [2, 5, 6], 3);
-tap.same(num1, [1, 2, 2, 3, 5, 6]);
