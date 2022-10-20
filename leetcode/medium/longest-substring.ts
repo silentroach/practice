@@ -1,11 +1,9 @@
-import tap from "tap";
-
 /**
  * Given a string s, find the length of the longest substring
  * without repeating characters.
  */
 
-const lengthOfLongestSubstring = (s: string): number => {
+export const lengthOfLongestSubstring = (s: string): number => {
   const length = s.length;
   if (length === 0) {
     return 0;
@@ -34,14 +32,3 @@ const lengthOfLongestSubstring = (s: string): number => {
 
   return longest;
 };
-
-tap.equal(lengthOfLongestSubstring("abcabcbb"), 3);
-tap.equal(lengthOfLongestSubstring("bbbbb"), 1);
-tap.equal(lengthOfLongestSubstring("pwwkew"), 3);
-tap.equal(lengthOfLongestSubstring(" "), 1);
-tap.equal(lengthOfLongestSubstring("au"), 2);
-tap.equal(lengthOfLongestSubstring("cdd"), 2);
-tap.equal(lengthOfLongestSubstring("dvdf"), 3);
-tap.equal(lengthOfLongestSubstring("anviaj"), 5);
-tap.equal(lengthOfLongestSubstring("bpfbhmipx"), 7);
-tap.equal(lengthOfLongestSubstring("ggububgvfk"), 6);
