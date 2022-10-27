@@ -1,0 +1,11 @@
+version: "3"
+
+# just to check db problems locally
+
+services:
+  db:
+    image: mariadb:10
+    ports:
+      - 3306
+    env_file:
+      - .env

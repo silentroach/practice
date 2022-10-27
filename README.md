@@ -5,8 +5,11 @@
 
 Problems solving practice
 
+Trying not to publish problems from Leetcode Premium, but if you found some – please report me.
+
 # TODO
 
+- [ ] Database problems solve testing
 - [x] Migrate from tap to jest
 - [ ] Migrate old tests from tap to jest
 - [ ] Recheck leetcode/medium/word-search
