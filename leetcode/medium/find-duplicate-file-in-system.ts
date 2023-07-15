@@ -57,7 +57,7 @@ tap.same(
   [
     ["root/a/1.txt", "abcd"],
     ["root/a/2.txt", "efgh"],
-  ]
+  ],
 );
 
 tap.same(
@@ -70,7 +70,7 @@ tap.same(
   [
     ["root/a/1.txt", "root/c/3.txt"],
     ["root/a/2.txt", "root/c/d/4.txt", "root/4.txt"],
-  ]
+  ],
 );
 
 tap.same(
@@ -82,6 +82,6 @@ tap.same(
   [
     ["root/a/1.txt", "root/c/3.txt"],
     ["root/a/2.txt", "root/c/d/4.txt"],
-  ]
+  ],
 );
 // endregion

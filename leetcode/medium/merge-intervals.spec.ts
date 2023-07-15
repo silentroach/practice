@@ -9,7 +9,7 @@ it("merges consecutive intervals", () => {
     merge([
       [1, 2],
       [2, 3],
-    ])
+    ]),
   ).toEqual([[1, 3]]);
 });
 
@@ -20,7 +20,7 @@ it("merges overlapping intervals", () => {
       [15, 18],
       [2, 6],
       [8, 10],
-    ])
+    ]),
   ).toEqual([
     [1, 6],
     [8, 10],

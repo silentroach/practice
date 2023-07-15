@@ -7,7 +7,7 @@ import tap from "tap";
 
 const intersection = (nums1: number[], nums2: number[]): number[] => {
   const [smaller, bigger] = [nums1, nums2].sort(
-    (n1, n2) => n1.length - n2.length
+    (n1, n2) => n1.length - n2.length,
   );
 
   if (smaller.length === 0) {

@@ -27,7 +27,7 @@ const IntegerMax = Math.pow(2, 31) - 1;
 const DigitsMap = new Map(
   Array(10)
     .fill(0)
-    .map((_, idx) => [String(idx), idx])
+    .map((_, idx) => [String(idx), idx]),
 );
 
 export const myAtoi = (s: string): number => {

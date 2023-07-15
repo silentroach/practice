@@ -29,10 +29,10 @@ tap.equal(
     new TreeNode(
       4,
       new TreeNode(2, new TreeNode(1), new TreeNode(3)),
-      new TreeNode(7)
+      new TreeNode(7),
     ),
-    2
+    2,
   )?.val,
-  2
+  2,
 );
 // endregion

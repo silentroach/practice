@@ -9,7 +9,7 @@
 type Interval = [number, number];
 
 export const merge = (
-  intervals: readonly Readonly<Interval>[]
+  intervals: readonly Readonly<Interval>[],
 ): readonly Interval[] => {
   const result: Interval[] = [];
 

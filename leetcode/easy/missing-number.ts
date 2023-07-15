@@ -10,7 +10,7 @@
 type SolutionFunc = (nums: number[]) => number;
 
 export const missingNumberBySorting: SolutionFunc = (
-  nums: number[]
+  nums: number[],
 ): number => {
   const length = nums.length;
   if (length < 1) {
@@ -45,7 +45,7 @@ export const missingNumberBySum: SolutionFunc = (nums: number[]): number => {
   const sum = nums.reduce((sum, num) => sum + num);
   const correctSum = Array.from(
     { length: nums.length + 1 },
-    (_, idx) => idx
+    (_, idx) => idx,
   ).reduce((sum, num) => sum + num);
 
   return correctSum - sum;
@@ -59,6 +59,6 @@ export const missingNumberByReduce: SolutionFunc = (nums: number[]): number => {
 
   return nums.reduce(
     (previous, element, idx) => previous - element + idx,
-    length
+    length,
   );
 };

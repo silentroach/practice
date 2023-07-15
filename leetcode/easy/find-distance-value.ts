@@ -14,7 +14,7 @@ import tap from "tap";
 const findTheDistanceValue = (
   arr1: number[],
   arr2: number[],
-  d: number
+  d: number,
 ): number => {
   arr2.sort((a, b) => a - b);
 

@@ -8,7 +8,7 @@ it("dear alan how are you", () => {
       ["how", "nhoware"],
       ["alan", "arala"],
       ["dear", "de"],
-    ])
+    ]),
   ).toBe("dearalanhowareyou");
 });
 
@@ -18,6 +18,6 @@ it("impossible case", () => {
       ["a", "ab"],
       ["b", "bb"],
       ["c", "cc"],
-    ])
+    ]),
   ).toBeUndefined();
 });

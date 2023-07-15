@@ -14,7 +14,7 @@ const canConstruct = (ransomNote: string, magazine: string): boolean => {
     .split("")
     .reduce(
       (counter, letter) => counter.set(letter, (counter.get(letter) ?? 0) + 1),
-      new Map<string, number>()
+      new Map<string, number>(),
     );
 
   return ransomNote.split("").every((letter) => {

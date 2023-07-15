@@ -7,11 +7,11 @@
 export const isValidSudoku = (board: string[][]): boolean => {
   const colHashes: Array<Set<string>> = Array.from(
     { length: 9 },
-    () => new Set()
+    () => new Set(),
   );
   const boxHashes: Array<Set<string>> = Array.from(
     { length: 9 },
-    () => new Set()
+    () => new Set(),
   );
 
   return board.every((row, rowIdx) => {

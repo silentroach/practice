@@ -10,7 +10,7 @@ import tap from "tap";
 
 const containsNearbyDuplicate = (
   nums: readonly number[],
-  k: number
+  k: number,
 ): boolean => {
   const pos = new Map<number, number>();
 

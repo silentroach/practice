@@ -10,7 +10,7 @@ import type { TreeNode } from "../_predefined/tree-node";
 export const getTargetCopy = (
   original: TreeNode | null,
   cloned: TreeNode | null,
-  target: TreeNode | null
+  target: TreeNode | null,
 ): TreeNode | null => {
   if (original === null || cloned === null || target === null) {
     return null;

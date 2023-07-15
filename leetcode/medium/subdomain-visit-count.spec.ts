@@ -22,7 +22,7 @@ it("passes example 1", () => {
       "50 yahoo.com",
       "1 intel.mail.com",
       "5 wiki.org",
-    ])
+    ]),
   ).toMatchInlineSnapshot(`
     [
       "951 com",

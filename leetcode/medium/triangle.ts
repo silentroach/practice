@@ -28,7 +28,7 @@ const minimumTotal = (triangle: readonly number[][]): number =>
   triangle.reduceRight(
     (totals, row) =>
       reduceRow(row.map((element, idx) => element + (totals[idx] ?? 0))),
-    [] as readonly number[]
+    [] as readonly number[],
   )[0] ?? 0;
 
 tap.same(reduceRow([]), []);

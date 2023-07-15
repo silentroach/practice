@@ -14,7 +14,7 @@ import { arrayToList, ListNode, listToArray } from "../_predefined/list-node";
 const addTwoNumbersInner = (
   l1?: ListNode | null,
   l2?: ListNode | null,
-  remains: number = 0 // can be 0 or 1
+  remains: number = 0, // can be 0 or 1
 ): ListNode | null => {
   if (!l1 && !l2) {
     if (remains > 0) {
@@ -28,7 +28,7 @@ const addTwoNumbersInner = (
 
   return new ListNode(
     sum % 10,
-    addTwoNumbersInner(l1?.next, l2?.next, sum >= 10 ? 1 : 0)
+    addTwoNumbersInner(l1?.next, l2?.next, sum >= 10 ? 1 : 0),
   );
 };
 
@@ -37,7 +37,7 @@ const addTwoNumbersInner = (
  */
 const addTwoNumbers = (
   l1: ListNode | null,
-  l2: ListNode | null
+  l2: ListNode | null,
 ): ListNode | null => {
   if (l1 === null) {
     return l2;
@@ -54,14 +54,17 @@ const addTwoNumbers = (
 
 tap.same(
   listToArray(addTwoNumbers(arrayToList([2, 4, 3]), arrayToList([5, 6, 4]))),
-  [7, 0, 8]
+  [7, 0, 8],
 );
 
 tap.same(listToArray(addTwoNumbers(arrayToList([0]), arrayToList([0]))), [0]);
 
 tap.same(
   listToArray(
-    addTwoNumbers(arrayToList([9, 9, 9, 9, 9, 9, 9]), arrayToList([9, 9, 9, 9]))
+    addTwoNumbers(
+      arrayToList([9, 9, 9, 9, 9, 9, 9]),
+      arrayToList([9, 9, 9, 9]),
+    ),
   ),
-  [8, 9, 9, 9, 0, 0, 0, 1]
+  [8, 9, 9, 9, 0, 0, 0, 1],
 );

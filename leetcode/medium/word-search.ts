@@ -41,7 +41,7 @@ const lookup = (
   used: Set<Position>,
   letters: readonly string[],
   idx = 0,
-  current?: Position
+  current?: Position,
 ): boolean => {
   const letter = letters[idx];
   if (letter === undefined) {
@@ -54,7 +54,7 @@ const lookup = (
     .filter(
       (letterPosition) =>
         !used.has(letterPosition) &&
-        (!current || isNeighbors(current, letterPosition))
+        (!current || isNeighbors(current, letterPosition)),
     );
 
   for (const variant of variants) {
@@ -87,7 +87,7 @@ const exist = (board: readonly string[][], word: string): boolean => {
 
       return positions;
     },
-    new Map<string, Position[]>([...unique].map((letter) => [letter, []]))
+    new Map<string, Position[]>([...unique].map((letter) => [letter, []])),
   );
 
   return lookup(positions, new Set(), letters);
@@ -100,9 +100,9 @@ tap.equal(
       ["S", "F", "C", "S"],
       ["A", "D", "E", "E"],
     ],
-    "ABCCED"
+    "ABCCED",
   ),
-  true
+  true,
 );
 
 tap.equal(
@@ -112,7 +112,7 @@ tap.equal(
       ["S", "F", "C", "S"],
       ["A", "D", "E", "E"],
     ],
-    "ABCB"
+    "ABCB",
   ),
-  false
+  false,
 );

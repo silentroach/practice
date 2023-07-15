@@ -17,7 +17,7 @@ export const makesquare = (matchsticks: number[]): boolean => {
   }
 
   const perimeter = matchsticks.reduce(
-    (perimeter, length) => perimeter + length
+    (perimeter, length) => perimeter + length,
   );
 
   if (perimeter % 4 !== 0) {

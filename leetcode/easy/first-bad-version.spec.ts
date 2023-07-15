@@ -14,7 +14,7 @@ it.each([
   "works with %d versions and first %d bad",
   (versionCount, firstBadVersion) => {
     expect(solution(mockedBadVersion(firstBadVersion))(versionCount)).toBe(
-      firstBadVersion
+      firstBadVersion,
     );
-  }
+  },
 );

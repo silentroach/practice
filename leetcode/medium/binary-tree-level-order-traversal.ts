@@ -22,8 +22,8 @@ const levelOrder = (root: TreeNode | null): number[][] => {
     level = level.reduce((level, node) => {
       level.push(
         ...[node.left, node.right].filter(
-          (node): node is TreeNode => node !== null
-        )
+          (node): node is TreeNode => node !== null,
+        ),
       );
 
       row.push(node.val);
@@ -43,10 +43,10 @@ tap.same(
     new TreeNode(
       3,
       new TreeNode(9),
-      new TreeNode(20, new TreeNode(15), new TreeNode(7))
-    )
+      new TreeNode(20, new TreeNode(15), new TreeNode(7)),
+    ),
   ),
-  [[3], [9, 20], [15, 7]]
+  [[3], [9, 20], [15, 7]],
 );
 
 tap.same(levelOrder(new TreeNode(1)), [[1]]);

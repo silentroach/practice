@@ -19,7 +19,7 @@ type Grid = string[][];
 const removeIsland = (
   grid: Grid,
   rowIndex: number,
-  columnIndex: number
+  columnIndex: number,
 ): void => {
   grid[rowIndex][columnIndex] = ItemType.Water;
 

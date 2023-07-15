@@ -56,7 +56,7 @@ tap.equal(
     [2, 1],
     [2, 2],
   ]),
-  "A"
+  "A",
 );
 
 tap.equal(
@@ -68,7 +68,7 @@ tap.equal(
     [1, 0],
     [2, 0],
   ]),
-  "B"
+  "B",
 );
 
 tap.equal(
@@ -83,6 +83,6 @@ tap.equal(
     [0, 2],
     [2, 2],
   ]),
-  "Draw"
+  "Draw",
 );
 // endregion

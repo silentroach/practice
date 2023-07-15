@@ -12,7 +12,7 @@
 
 export const coinChange = (
   coins: readonly number[],
-  amount: number
+  amount: number,
 ): number => {
   let result = -1;
 

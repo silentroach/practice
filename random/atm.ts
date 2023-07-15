@@ -1,11 +1,11 @@
 export const atm = (
   banknotes: readonly number[],
-  amount: number
+  amount: number,
 ): ReadonlyMap<number, number> => {
   const result = new Map<number, number>();
 
   for (const banknote of [...banknotes].sort(
-    (value1, value2) => value2 - value1
+    (value1, value2) => value2 - value1,
   )) {
     const count = amount / banknote;
     if (count < 1) {

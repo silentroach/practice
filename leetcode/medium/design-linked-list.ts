@@ -17,7 +17,7 @@ class Node {
   constructor(
     public readonly value: number,
     public next?: Node,
-    public previous?: Node
+    public previous?: Node,
   ) {}
 }
 

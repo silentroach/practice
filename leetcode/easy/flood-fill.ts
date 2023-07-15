@@ -22,7 +22,7 @@ const floodFill = (
   image: number[][],
   sr: number,
   sc: number,
-  color: number
+  color: number,
 ): number[][] => {
   const original = image[sr][sc]!;
   if (original === color) {
@@ -59,13 +59,13 @@ tap.same(
     ],
     1,
     1,
-    2
+    2,
   ),
   [
     [2, 2, 2],
     [2, 2, 0],
     [2, 0, 1],
-  ]
+  ],
 );
 
 tap.same(
@@ -76,10 +76,10 @@ tap.same(
     ],
     0,
     0,
-    0
+    0,
   ),
   [
     [0, 0],
     [0, 0],
-  ]
+  ],
 );

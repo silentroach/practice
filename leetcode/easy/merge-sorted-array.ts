@@ -18,7 +18,7 @@ export const merge = (
   nums1: number[],
   m: number,
   nums2: number[],
-  n: number
+  n: number,
 ): void => {
   let end = m + n - 1;
   --m;

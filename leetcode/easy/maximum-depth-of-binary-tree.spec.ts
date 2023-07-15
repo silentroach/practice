@@ -16,7 +16,7 @@ describe.each([maxDepth, maxDepthIterative])("%p", (getDepth) => {
 
   it("returns 3 for three level tree", () => {
     expect(
-      getDepth(new TreeNode(0, null, new TreeNode(10, new TreeNode(5))))
+      getDepth(new TreeNode(0, null, new TreeNode(10, new TreeNode(5)))),
     ).toBe(3);
   });
 });

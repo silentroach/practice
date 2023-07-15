@@ -12,7 +12,7 @@ const firstUniqChar = (s: string): number => {
 
   const counter = letters.reduce(
     (counter, letter) => counter.set(letter, (counter.get(letter) ?? 0) + 1),
-    new Map<string, number>()
+    new Map<string, number>(),
   );
 
   return letters.findIndex((letter) => counter.get(letter) === 1);

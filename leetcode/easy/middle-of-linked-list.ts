@@ -29,10 +29,10 @@ tap.equal(
   middleNode(
     new ListNode(
       1,
-      new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5))))
-    )
+      new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))),
+    ),
   )?.val,
-  3
+  3,
 );
 
 tap.equal(
@@ -41,10 +41,10 @@ tap.equal(
       1,
       new ListNode(
         2,
-        new ListNode(3, new ListNode(4, new ListNode(5, new ListNode(6))))
-      )
-    )
+        new ListNode(3, new ListNode(4, new ListNode(5, new ListNode(6)))),
+      ),
+    ),
   )?.val,
-  4
+  4,
 );
 // endregion

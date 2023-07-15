@@ -16,7 +16,7 @@ import { TreeNode } from "../_predefined/tree-node";
 const isValidBST = (
   root: TreeNode | null,
   min = -Infinity,
-  max = Infinity
+  max = Infinity,
 ): boolean => {
   if (!root) {
     return true;
@@ -40,10 +40,10 @@ tap.equal(
     new TreeNode(
       5,
       new TreeNode(1),
-      new TreeNode(4, new TreeNode(3), new TreeNode(6))
-    )
+      new TreeNode(4, new TreeNode(3), new TreeNode(6)),
+    ),
   ),
-  false
+  false,
 );
 
 tap.equal(
@@ -51,9 +51,9 @@ tap.equal(
     new TreeNode(
       5,
       new TreeNode(4),
-      new TreeNode(6, new TreeNode(3), new TreeNode(7))
-    )
+      new TreeNode(6, new TreeNode(3), new TreeNode(7)),
+    ),
   ),
-  false
+  false,
 );
 // endregion

@@ -109,7 +109,7 @@ const probes = new Set([
 
 tap.same(
   [...probes].sort((a, b) => a - b),
-  [1, 2]
+  [1, 2],
 );
 
 tap.equal(collection.remove(1), true); // contains 1

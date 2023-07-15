@@ -14,7 +14,7 @@ import { arrayToList, ListNode, listToArray } from "../_predefined/list-node";
 
 const mergeTwoLists = (
   list1: ListNode | null,
-  list2: ListNode | null
+  list2: ListNode | null,
 ): ListNode | null => {
   if (list1 === null) {
     return list2;
@@ -37,7 +37,7 @@ const mergeTwoLists = (
 
 tap.same(
   listToArray(mergeTwoLists(arrayToList([1, 2, 4]), arrayToList([1, 3, 4]))),
-  [1, 1, 2, 3, 4, 4]
+  [1, 1, 2, 3, 4, 4],
 );
 
 tap.same(listToArray(mergeTwoLists(arrayToList([]), arrayToList([]))), []);

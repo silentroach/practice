@@ -16,7 +16,10 @@ interface IMinStack {
 }
 
 class StackItem {
-  constructor(public readonly value: number, public readonly minimum: number) {}
+  constructor(
+    public readonly value: number,
+    public readonly minimum: number,
+  ) {}
 }
 
 export class MinStack implements IMinStack {

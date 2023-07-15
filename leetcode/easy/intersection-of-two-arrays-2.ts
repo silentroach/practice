@@ -10,7 +10,7 @@ import tap from "tap";
 
 const intersect = (nums1: number[], nums2: number[]): number[] => {
   const [smaller, bigger] = [nums1, nums2].sort(
-    (n1, n2) => n1.length - n2.length
+    (n1, n2) => n1.length - n2.length,
   );
 
   if (smaller.length === 0) {
@@ -19,7 +19,7 @@ const intersect = (nums1: number[], nums2: number[]): number[] => {
 
   const smallerCount = smaller.reduce(
     (map, num) => map.set(num, (map.get(num) ?? 0) + 1),
-    new Map<number, number>()
+    new Map<number, number>(),
   );
 
   return bigger.filter((number) => {

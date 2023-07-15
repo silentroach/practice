@@ -35,7 +35,7 @@ const islandPerimeter = (grid: readonly number[][]): number => {
 
         return count;
       }, result),
-    0
+    0,
   );
 };
 
@@ -47,7 +47,7 @@ tap.equal(
     [0, 1, 0, 0],
     [1, 1, 0, 0],
   ]),
-  16
+  16,
 );
 
 tap.equal(islandPerimeter([[1]]), 4);

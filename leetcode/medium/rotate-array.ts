@@ -8,7 +8,7 @@ export type RotateFunction = (nums: number[], k: number) => void;
 
 export const rotateByReverse: RotateFunction = (
   nums: number[],
-  k: number
+  k: number,
 ): void => {
   const length = nums.length;
   k %= length; // reduce extra steps if it is bigger than nums length

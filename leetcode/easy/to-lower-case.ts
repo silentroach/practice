@@ -14,5 +14,5 @@ const UpperCaseRegex = /[A-Z]/g;
 
 export const toLowerCase = (s: string): string =>
   s.replace(UpperCaseRegex, (value) =>
-    String.fromCharCode(value.charCodeAt(0) + 32)
+    String.fromCharCode(value.charCodeAt(0) + 32),
   );

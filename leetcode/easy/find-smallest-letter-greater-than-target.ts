@@ -12,7 +12,7 @@ import tap from "tap";
 
 const nextGreatestLetter = (
   letters: readonly string[],
-  target: string
+  target: string,
 ): string => {
   let start = 0;
   let end = letters.length;

@@ -17,7 +17,7 @@ type Range = readonly [number, number];
 
 export const insert = (
   intervals: readonly Range[],
-  newInterval: Range
+  newInterval: Range,
 ): Range[] => {
   const result: Range[] = [];
   let [start, end] = newInterval;

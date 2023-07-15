@@ -13,7 +13,7 @@
 
 export const isPrefixOfWord = (
   sentence: string,
-  searchWord: string
+  searchWord: string,
 ): number => {
   const idx = sentence
     .split(" ")

@@ -23,15 +23,18 @@ class Solution {
     this.pool = blacklist
       .filter((value) => value >= 0 && value <= upper)
       .sort((a, b) => a - b)
-      .reduce((pools, value) => {
-        if (value > lower) {
-          pools.push([lower, value - 1]);
-        }
+      .reduce(
+        (pools, value) => {
+          if (value > lower) {
+            pools.push([lower, value - 1]);
+          }
 
-        lower = value + 1;
+          lower = value + 1;
 
-        return pools;
-      }, [] as Array<[number, number]>);
+          return pools;
+        },
+        [] as Array<[number, number]>,
+      );
 
     if (blacklist.length === 0) {
       this.pool.push([0, upper]);
@@ -60,8 +63,8 @@ tap.equal(zero.pick(), 0);
 const twoRanges = new Solution(3, [1]);
 tap.equal(
   [twoRanges.pick(), twoRanges.pick(), twoRanges.pick()].filter(
-    (value) => value !== 0 && value !== 2
+    (value) => value !== 0 && value !== 2,
   ).length,
-  0
+  0,
 );
 // endregion

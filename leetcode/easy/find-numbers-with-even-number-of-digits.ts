@@ -24,7 +24,7 @@ tap.equal(getNumberOfDigits(12345), 5);
 const findNumbers = (nums: readonly number[]): number =>
   nums.reduce(
     (count, num) => (getNumberOfDigits(num) % 2 === 0 ? count + 1 : count),
-    0
+    0,
   );
 
 tap.equal(findNumbers([12, 345, 2, 6, 7896]), 2);

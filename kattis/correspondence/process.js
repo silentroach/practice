@@ -24,7 +24,7 @@ const solve = (
   used = [],
   leftTail = "",
   rightTail = "",
-  depth = 0
+  depth = 0,
 ) => {
   const results = [];
 
@@ -53,7 +53,7 @@ const solve = (
         used.concat(idx),
         ll > rl ? newLeft.slice(rl) : "",
         rl > ll ? newRight.slice(ll) : "",
-        depth + 1
+        depth + 1,
       )) {
         results.push(solution);
       }
@@ -94,6 +94,6 @@ exports.processCase = (pairs) => {
 
   return solve(
     pairs,
-    pairs.map((_, idx) => idx)
+    pairs.map((_, idx) => idx),
   ).sort((a, b) => a.length - b.length || a.localeCompare(b))[0];
 };
